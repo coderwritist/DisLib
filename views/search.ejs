@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Search result</title>
+</head>
+<body>
+    <a href="/home"><button>Home</button></a>
+    <h1>Results for search term: </h1>
+            <h2>
+                <li><%= book.bookname%></li>
+            </h2>
+            <ul>
+                <li><%= book.author%> </li>
+                <a href="/profile?name=<%=book.owner%>"><li><%= book.owner%> </li></a>
+                <li><%= book.edition%> </li>
+                <li><%= book.coursename%> </li>           
+            </ul>
+          
+</body>
+</html>

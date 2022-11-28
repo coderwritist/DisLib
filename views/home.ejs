@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <a href="/enterbooks"><button>Enter books</button></a>
+    <a href="/search"><button>Search</button></a>
+    <h1>Welcome to dislib</h1>
+    <h2>The books available are</h2>
+        
+        <% books.forEach(function(book){%>
+            <li><%= book.bookname%> </li>
+            <ul>
+                <li><%= book.author%> </li>
+                <a href="/profile?name=<%= book.owner %>"><li><%= book.owner%> </li></a>            
+            </ul>
+        <%}) %> 
+          
+</body>
+</html>
