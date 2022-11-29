@@ -139,11 +139,7 @@ app.post("/search", function(req, res){
                 var temp = val[i]
                 if(temp.bookname === bookname)
                 {
-<<<<<<< HEAD
                     res.render("search1", {"book": temp})
-=======
-                    res.render("search", {"book": temp})
->>>>>>> 9be1d1347ccc618cd81151d90aff5a5501129187
                     return
                 }
 
