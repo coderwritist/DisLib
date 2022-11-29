@@ -1,0 +1,57 @@
+*{
+    box-sizing: border-box;
+      font-family: sans-serif;
+  
+  }
+
+h1{
+    text-align:center;
+    font-family: sans-serif;
+}
+body{
+    justify-content: center;
+    background-color: brown;
+    background-image: url("./bookshelf.png");
+    background-position: center;
+    background-size: 100%;
+    background-repeat:no-repeat;
+    height: 100vh;
+    margin-left:auto;
+    margin-right: auto;
+    text-align: center;
+
+
+
+
+}
+
+.h1div
+{
+    margin-top: 20px;
+    padding-top: 20px;
+    border: 1px solid black;
+    margin-bottom: 5px;
+    width: 500px;
+    margin-left:auto;
+    margin-right: auto;
+    background-color: #50C878;
+    border-radius: 8px;
+    color: black;
+}
+
+button {
+    background-color: #af4cad; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  
+.center
+{
+    margin-left: auto;
+    margin-right: auto;
+}

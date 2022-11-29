@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+<<<<<<< HEAD
+    <link rel="stylesheet" href="./style/home.css"> 
+</head>
+<body>
+    <div class="header">
+        <a class="b" href="/enterbooks"><button >Enter books</button></a>
+        <a href="/search"><button>Search</button></a>
+    </div>
+    <div class = "newcontainer">
+        <h1>Welcome to dislib</h1>
+    <hr>
+    <h2>The books available are</h2>
+    </div>
+        
+
+   
+    <% books.forEach(function(book){%>
+    
+
+            <div class="containt">
+
+                <h3>Book name</h3>
+                <%= book.bookname%> 
+                <h3>Author</h3>
+                <%= book.author%>
+                <h3>Owner</h3>
+                <a href="/profile?name=<%= book.owner %>"><%= book.owner%> </a>
+                <br>
+                <br>
+                <br>
+
+            </div>
+                 
+            
+        <%}) %> 
+    </div>
+      
+    
+
+        
+          
+</body>
+
+=======
+</head>
+<body>
+    <a href="/enterbooks"><button>Enter books</button></a>
+    <a href="/search"><button>Search</button></a>
+    <h1>Welcome to dislib</h1>
+    <h2>The books available are</h2>
+        
+        <% books.forEach(function(book){%>
+            <li><%= book.bookname%> </li>
+            <ul>
+                <li><%= book.author%> </li>
+                <a href="/profile?name=<%= book.owner %>"><li><%= book.owner%> </li></a>            
+            </ul>
+        <%}) %> 
+          
+</body>
+</html>
+>>>>>>> 9be1d1347ccc618cd81151d90aff5a5501129187

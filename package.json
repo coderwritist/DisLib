@@ -1,0 +1,31 @@
+{
+  "name": "dislib",
+  "version": "1.0.0",
+  "description": "books sharing platform",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderwritist/DisLib.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coderwritist/DisLib/issues"
+  },
+  "homepage": "https://github.com/coderwritist/DisLib#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "ejs": "^3.1.8",
+<<<<<<< HEAD
+    "express": "^4.18.2",
+=======
+>>>>>>> 9be1d1347ccc618cd81151d90aff5a5501129187
+    "mongoose": "^6.7.3"
+  }
+}
