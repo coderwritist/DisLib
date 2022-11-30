@@ -345,7 +345,7 @@ app.post("/register", function(req, res){
 
 app.post("/enterbooks", function(req, res){
     console.log(req.body)
-
+    var name = req.query.name
     var bookname = req.body.bookname
     var edition = req.body.edition
     var author = req.body.author
@@ -365,7 +365,7 @@ app.post("/enterbooks", function(req, res){
             throw err;
           }
           console.log("Data inserted successfully!");
-          res.redirect("/home")   
+          res.redirect("/home?name="+name)   
           return
         });
 
