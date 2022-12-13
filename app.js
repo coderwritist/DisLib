@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const bp = require("body-parser");
 app.use(bp.urlencoded({extended: true}));
-app.listen(4000, function(){console.log("running...")});
+app.listen(3000, function(){console.log("running...")});
 const https = require("https");
 const path = require("path");
 const {MongoClient} = require('mongodb');// load mongodb
@@ -41,11 +41,6 @@ const booksschema = mongoose.Schema({
 const usermodel = mongoose.model("users", userschema)
 const bookmodel = mongoose.model("books", booksschema)
 const requestmodel = mongoose.model("requests", requestschema)
-
-
-
-
-const port = 3000;
 
 
 app.use(express.static(__dirname+ "/public"))
@@ -297,7 +292,6 @@ app.post("/login", function(req, res){
         }
         else
         {
-            // console.log(val)
             for(let i = 0; i<val.length; i++)
             {
                 var temp = val[i]
@@ -311,7 +305,7 @@ app.post("/login", function(req, res){
 
             }
             
-            res.sendFile(path.join(__dirname, "./404.html"));
+            res.sendFile(path.join(__dirname, "./logfailed.html"));
             return
         }
     })
@@ -380,8 +374,13 @@ app.post("/", function(req, res){
 
 
 
-mongoose.connect("mongodb://localhost/dislib", {
+mongoose.connect("mongodb://localhost:27017/dislib", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+}, function(err){
+    if(err)
+        console.log(err)
+    else
+        console.log("database connected")
 });
 var db = mongoose.connection;
